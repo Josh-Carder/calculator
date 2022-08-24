@@ -1,0 +1,115 @@
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.css" rel="stylesheet"></link>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hammadmadi/webflowcheck/style.css">
+<div class="job-position-saving-calculator">
+  <div class="jps-wrapper">
+      <div class="jps-container">
+          <div class="jps-header">
+              <h2>Team Builder</h2>
+              <h5>Find out how much you can save with Team Builder</h5>
+          </div>
+          <div class="jps-calcTool">
+              <div class="jps-left-cell">
+                  <button id="jps-addStaff" class="jps-action-btn ">Add Staff</button>
+                  <select name="country" id="country" class="jps-country-select">
+                      <option value="New Zealand">New Zealand</option>
+                      <option value="Australia">Australia</option>
+                      <option value="United States">United States</option>
+                      <option value="Canada">Canada</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Europe">Europe</option>
+                      <option value="Singapore">Singapore</option>
+                  </select>
+              </div>
+          </div>
+          <div class="jps-tool-box">
+              <div class="calc-tool-teamList">
+                  <div class="jps-tool-teamList">
+                      <div class="jps-tool-team-image">
+                          <img src="image/logo.png" alt="">
+                          <img src="image/logo.png" class="none-image" alt="">
+                      </div>
+                  </div>
+                  <div class="jps-tool-small-title">
+                      Build your offshore Team with Amped HQ. 
+                  </div>
+                  <div class="jps-tool-model-section">
+                      <div class="jps-tool-model-btn">
+                          <button id="jps-modal-show-selector" class="jps-tool-roleButton ">Get started</button>
+                      </div>
+                      <div class="jps-modalBox">
+                          <div class="modal-content" id="modal-content">
+                              <span class="close" id="close">×</span>
+                              <div class="modal-box-heding">
+                                  Add Staff Member
+                              </div>
+                              <div class="modalBox-search-input">
+                                  <select  class="category-staff"  placeholder="Select Category" id="category-staff">
+                                      <option value="all" selected>All</option>
+                                  </select>
+                              </div>
+                              <div class="modalBox-search-input">
+                                  <input type="text" class="search-staff"  placeholder="Search Staff..." id="search-staff">
+                              </div>
+                              <div class="modalBox-selector-list">
+                                  <!--  -->
+                              </div>
+                          </div>
+                          <div id="myModal" class="modal">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="jps-calc-teamList">
+                  <div class="jps-table-teamList">
+                      <div class="table-teamList-header row-flex">
+                          <div class="cell-teamList-title">
+                              <div class="cell teamList-label">Role Name</div>
+                          </div>
+                          <div class="cell-flex-row teamList-text">
+                              <div class="cell teamList-salary">Staff Required</div>
+                              <div class="cell teamList-salary">Experience Levels</div>
+                              <div class="cell teamList-salary">Onshore Cost</div>
+                              <div class="cell teamList-staff">Offshore Cost</div>
+                              <div class="cell teamList-saving">Savings</div>
+                              <div class="cell teamList-remove"></div>
+                              <!-- <select name="" id="">
+                                  <option value="Junior 1-2 Years Experience">Junior 1-2 Years Experience</option>
+                                  <option value="Intermediate 2-4 Years Experience">Intermediate 2-4 Years Experience</option>
+                                  <option value="Senior 5+ Years Experience">Senior 5+ Years Experience</option>
+                              </select> -->
+                          </div>
+                      </div>
+                      <div id="tBody-item">
+                          
+                      </div>
+                      
+                      
+                  </div>
+                  <div id="tBody-item-lists">
+                      
+                  </div>
+                  <div class="jps-team-saving ">
+                      <div class="team-saving-title">
+                          Estimated Monthly Savings:
+                      </div>
+                      <div class="team-summarySaving" >
+                          <span class="savingCurrency currency">US$</span>
+                          <span id="monthlyCost">346</span>
+                      </div>
+                  </div>
+                  <div class="jps-information-link">
+                      <a href="#">Get more information</a>
+                  </div>
+              </div>
+              
+              
+
+          </div>
+      </div>
+  </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.27.1/slimselect.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hammadmadi/webflowcheck/script.js"></script>
