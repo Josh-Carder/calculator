@@ -1,0 +1,704 @@
+
+  /**********Calculator Stylesheet**********/
+
+.jps-wrapper{
+    width: 100%;
+    background: #f7f8fc;
+}
+.jps-wrapper *{
+    font-family: "Montserrat",sans-serif;
+}
+.jps-container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+.jps-header{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0px;
+    box-sizing: border-box;
+}
+.jps-header h2{
+    margin: 0;
+    padding: 0 20px;
+    font-size: 260%;
+    font-weight: 700;
+    line-height: 60px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+}
+.jps-header h5{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #000000;
+
+}
+.flex-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.jps-calcTool{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.celllbl-div{
+
+}
+.cell-flex-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.jps-left-cell{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.jps-left-cell .jps-action-btn{
+    padding: 13px 30px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 3px;
+    border-radius: 40px;
+    background-color: #1f3154;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    color: #FFFFFF;
+    /* font-family: inherit; */
+    font-size: 18px;
+    font-weight: 400;
+    height: auto !important;
+}
+.jps-left-cell .jps-action-btn:hover{
+    color: white;
+    background-color: #999999;
+}
+.jps-country-select{
+    background: transparent;
+    border: none;
+    color: #1f3154;
+    font-size: 20px;
+    display: inline;
+    width: auto;
+}
+.jps-country-select:focus{
+    outline: 0;
+}
+.jps-tool-box{
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgb(0 0 0 / 5%);
+}
+.jps-tool-teamList{
+    width: 100%;
+    margin-top: 20px;
+}
+.jps-tool-team-image{
+    text-align: center;
+}
+.jps-tool-team-image img{
+    width: 50%;
+    max-width: 350px;
+    margin: 40px 0;
+}
+.jps-tool-small-title{
+    padding-bottom: 20px;
+    color: #000;
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.jps-tool-model-btn{
+    text-align: center;
+    margin-bottom: 50px;
+}
+#tBody-item-lists{
+    margin-top: 40px;
+}
+.list-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #cfdee5;
+    padding: 12px;
+}
+.list-row:last-child{
+    border-bottom: 1px solid #cfdee5;
+}
+.jps-tool-roleButton{
+    font-size: 22px;
+    padding: 15px 100px;
+    border-radius: 35px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #1f3154;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 5%);
+    margin: 10px 0 20px;
+    animation: shake 10s infinite;
+    animation-delay: 10s;
+    height: auto !important;
+}
+/* * The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding: 100px 0; 
+    /*Location of the box*/
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /* overflow: hidden; */
+    background-color: rgba(0,0,0,0.7);
+}
+.modal::-webkit-scrollbar {
+    display: none;
+}
+
+/* Modal Content */
+.modal-content {
+    display: none;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px 0;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -220px;
+    z-index: 500;
+    border-radius: 10px;
+    
+
+}
+/* //////////////////////// */
+.category-staff .ss-single-selected{
+    height: 80px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 40px;
+    font-size: 24px;
+    box-shadow: 0px 0px 10px 5px rgb(0 0 0 / 5%);
+    border-color: #CCCCCC;
+}
+
+.jps-country-select .ss-single-selected{
+    border: none;
+    background-color: transparent;
+    min-width: 200px;
+}
+.jps-country-select .ss-content .ss-list{
+    border: none;
+}
+
+.team-levels .placeholder,
+.team-levels .ss-list .ss-option{
+    position: relative;
+    color: #1f3154;
+}
+.team-levels .ss-list .ss-option::before{
+    position: absolute;
+    content: 'text';
+    left: 0;
+    bottom: 1px;
+    font-size: 10px;
+    text-align: left;
+    width: 100%;
+    padding: 0 10px;
+    color: inherit;
+    box-sizing: border-box;
+
+}
+.team-levels .ss-single-selected{
+    border: none;
+    background-color: transparent;
+}
+.team-levels .ss-content .ss-list .ss-option{
+    font-size: 16px;
+    padding: 5px 10px 10px 5px;
+}
+.team-levels .ss-list .ss-option:nth-child(1)::before{
+    content: '1-2 Years Experience';
+}
+.team-levels .ss-list .ss-option:nth-child(2)::before{
+    content: '2-4 Years Experience';
+}
+.team-levels .ss-list .ss-option:nth-child(3)::before{
+    content: '5+ Years Experience';
+}
+.team-levels .placeholder{
+  font-size: 16px !important;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    right: 12px;
+    top: 3px;
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-box-heding{
+    width: 100%;
+    text-align: center;
+    padding: 0 50px;
+    margin: 30px 0;
+    font-size: 34px;
+    font-weight: 700;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+.modalBox-search-input{
+    margin-top: 10px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+
+.modalBox-search-input input,
+.modalBox-search-input select{
+    width: 100%;
+    padding: 25px 25px;
+    font-size: 24px;
+    font-weight: normal;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 5px rgb(0 0 0 / 5%);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.modalBox-search-input select{
+    margin-bottom: 10px;
+}
+.modalBox-search-input input::placeholder,
+.modalBox-search-input select::placeholder{
+    color: #7D7D7D;
+}
+.modalBox-search-input input:focus,
+.modalBox-search-input select:focus{
+    outline: 0;
+    border-color: #1f3154;
+    box-shadow:none
+}
+.modalBox-selector-list{
+    padding: 20px 0px 0px 0px;
+    width: 100%;
+    max-height: 500px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.modalBox-selector-item{
+    padding: 20px 60px;
+    font-weight: normal;
+    border-style: none none solid none;
+    border-width: 1px;
+    box-sizing: border-box;
+    border-color: #edf4f6;
+}
+.modalBox-selector-item:hover{
+    cursor: pointer;
+    background-color: #C1C1C1;
+}
+.selector-title h4{
+    margin: 0px;
+    padding: 0px 0px 5px 0px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Montserrat',sans-serif;
+    text-transform: inherit;
+    color: #000000;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+.selector-description p{
+    margin: 0px !important;
+    padding: 0px 0px 5px 0px !important;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: 'Montserrat',sans-serif;
+    color: #000000;
+    box-sizing: border-box;
+
+}
+.jps-table-teamList{
+    min-height: 250px;
+    padding: 20px 0px 0px 0px;
+}
+.team-levels{
+    width: 100%;
+    height: 37px;
+    border: none;
+}
+.team-levels:focus{
+    outline: 0;
+}
+.row-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.table-teamList-header{
+    border-bottom: 1px solid #000000;
+}
+.cell,
+.itemCell{
+    width: 20%;
+    padding: 0px 20px 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: 'Montserrat',sans-serif;
+    box-sizing: border-box;
+    font-size:  18px;
+    color: #1f3154;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+.itemCell{
+    padding: 20px 0;
+    box-sizing: border-box;
+
+}
+.cell-teamList-title{
+    width: 35%;
+}
+.teamList-text{
+    width: 100%;
+}
+.teamList-label,.teamitem-label{
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+}
+.teamList-remove,
+.teamitem-remove{
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    color: #FF0000;
+    box-sizing: border-box;
+    line-height: 20px;
+}
+.teamitem-remove{
+    cursor: pointer;
+
+}
+.itemCell .currency{
+    font-size: 13px;
+    color: #808080;
+    font-weight: 400;
+    position: relative;
+    top: -4px;
+    box-sizing: border-box;
+}
+.table-teamList-item{
+    border-bottom: 1px solid #d5e8f4;;
+}
+.team-saving-title{
+    padding: 20px 0 0;
+    font-size: 30px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    color: #1f3154;
+}
+.team-summarySaving,
+.team-summarySaving span{
+    font-weight: 700;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 80px;
+}
+.team-summarySaving .savingCurrency{
+    font-size: 26px;
+    font-family: 'Montserrat',sans-serif;
+    position: relative;
+    top: -38px;
+    left: 20px;
+}
+.team-summarySaving #monthlyCost{
+    color: #1f3154;
+}
+
+
+.jps-team-saving{
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.jps-calc-teamList{
+    display: none;
+}
+.teamListCount{
+    display: inline-block;
+    width: 45px !important;
+    height: 30px;
+    font-size: 18px;
+    margin: 0px !important;
+    padding: 2px !important;
+    text-align: center;
+    font-weight: 700;
+    border-style: none;
+    color: #808080;
+    border-radius: 5px;
+    background-color: #FCFCFC;
+    border: 1px solid #e6e6e6;
+    box-sizing: border-box;
+
+}
+.teamListCount:focus{
+    outline: 0;
+}
+.teamlist-subtract:hover,
+.teamList-add:hover{
+    background: #1f3154;
+}
+.teamlist-subtract,
+.teamList-add{
+    width: 20px;
+    margin: 8px;
+    display: inline-flex;
+    line-height: 1 !important;
+    height: 20px !important;
+    align-items: center;
+    padding-top: 1px;
+    justify-content: center;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 900;
+    box-sizing: border-box;
+    color: white;
+    background: #1f3154;
+    cursor: pointer;
+    border: none;
+    padding: 5px 20px !important;
+}
+.teamlist-subtract{
+    padding-left: 6px;
+}
+.jps-calc-teamList{
+    position: relative;
+}
+.jps-information-link{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: -46px;
+}
+.jps-information-link a{
+    display: inline-block;
+    font-size: 20px;
+    padding: 12px 25px;
+    border-radius: 35px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #1f3154;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0px 0px 10px 10px rgb(0 0 0 / 5%);
+    animation: shake 10s infinite;
+    animation-delay: 15s;
+}
+@keyframes shake {
+    from, 10%, to {
+        -webkit-transform: translate3d(0, 0, 0)  scale(1);
+    }
+    1%, 3%, 5%, 7% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-10px, 3px, -3px)rotate(5deg) scale(1.2);
+    }
+    2%, 4%, 6%, 8% {
+        -webkit-transform: translate3d(5px, 0, 0);
+        transform: translate3d(10px, -3px, -3px) rotate(-5deg) scale(1.2);
+    }
+}
+.none-image{
+    display: none;
+}
+@media only screen and (max-width: 1180px) {
+    .jps-container {
+        width: 100%;
+    }
+    .modal-content {
+        width: 80%;
+    }
+
+}
+@media only screen and (max-width: 1080px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .cell-teamList-title {
+        width: 30%;
+    }
+    .cell, .itemCell {
+        width: 25%;
+    }
+    .cell{
+        padding: 0px 10px 10px;
+
+    }
+    .teamList-remove, .teamitem-remove{
+        width: 5%;
+    }
+    .teamList-label, .teamitem-label {
+        width: 100%;
+    }
+    .teamitem-label{
+        padding-left: 10px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .jps-header h2 {
+        font-size: 170%;
+        line-height: 40px;
+    }
+    .jps-header h5 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+    }
+    .jps-tool-small-title{
+        font-size: 25px;
+    }
+    .jps-tool-roleButton {
+        font-size: 16px;
+        font-weight: 500;
+        border: 3px solid white;
+    }
+    .jps-tool-model-btn {
+        margin-bottom: 0;
+    }
+    .selector-description p{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    .modalBox-selector-item{
+        padding: 15px 15px 10px 15px;
+    }
+    .selector-title h4{
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .modalBox-search-input input{
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+    .modal-content {
+        width: 100%;
+    }
+    .jps-team-saving{
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-saving-title {
+        margin-bottom: 10px;
+    }
+    .team-summarySaving{
+        margin-bottom: 25px;
+        line-height: 50px;
+    }
+    .cell, .itemCell {
+        font-size: 16px;
+    }
+    .row-flex{
+        align-items: flex-end;
+    }
+    .teamitem-remove{
+        font-size: 34px;
+    }
+    .itemCell .currency {
+        top: -1px;
+    }
+    .team-saving-title {
+        font-size: 24px;
+    }
+    .team-summarySaving span{
+        font-size: 60px;
+    }
+    .team-summarySaving .savingCurrency {
+        top: -18px;
+        left: 10px;
+    }
+    .cell-flex-row {
+        align-items: flex-end;
+    }
+    .table-teamList-item {
+        padding-top: 10px;
+    }
+    .teamList-text{
+        position: relative;
+    }
+    .teamitem-remove{
+        position: absolute;
+        right: 0;
+        top: -5px;
+        padding: 0;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .jps-tool-small-title {
+        font-size: 22px;
+    }
+    .jps-tool-box {
+        padding: 20px 10px;
+    }
+    .teamlist-subtract, .teamList-add {
+        margin: 3px;
+    }
+    .cell {
+        padding: 0px 5px 10px;
+    }
+    .cell-teamList-title {
+        width: 25%;
+    }
+    .teamListCount {
+        width: 35px;
+    }
+}
+
