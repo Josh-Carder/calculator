@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
           "Onshore Cost": "$66,000",
           "Offshore Cost": "$34,500",
           "Annual Savings": "$31,500",
-          "Monthly Cost Onshore": "$5,500",
+          "Monthly Cost Onshore": "$5,501",
           "Monthly Cost Offshore": "$2,875",
           "Monthly Savings": "$2,625",
           "%": "48%"
