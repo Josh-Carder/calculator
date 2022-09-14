@@ -194,13 +194,13 @@ jQuery(document).ready(function($){
           "Role Name": "Accountant (CPA)",
           "Role Responsibilities": "Financial accounting, reporting and analysis. Can provide tax accounting service and support in tax planning and reporting",
           "Experience Levels": "Junior 1-2 Years Experience",
-          "Onshore Cost": "$96,000",
-          "Offshore Cost": "$39,330",
-          "Annual Savings": "$56,670",
-          "Monthly Cost Onshore": "$8,000",
-          "Monthly Cost Offshore": "$3,278",
+          "Onshore Cost": "$78000",
+          "Offshore Cost": "$33600",
+          "Annual Savings": "$44400",
+          "Monthly Cost Onshore": "$6500",
+          "Monthly Cost Offshore": "$2800",
           "Monthly Savings": "$4,723",
-          "%": "59%"
+          "%": "43%"
         },
         {
           "Country": "New Zealand",
