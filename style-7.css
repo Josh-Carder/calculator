@@ -1,6 +1,8 @@
 
   /**********Calculator Stylesheet**********/
-
+.job-position-saving-calculator{
+    position: relative;
+}
 .jps-wrapper{
     width: 100%;
     background: #f7f8fc;
@@ -966,7 +968,7 @@
     }
   }
   .loader-container{
-      position: fixed;
+      position: absolute;
       left: 0;
       top: 0;
       width: 100%;
