@@ -10,10 +10,6 @@ jQuery(document).ready(function($){
     new SlimSelect({ select: "select#country", showContent: "down", showSearch: !1, });
     new SlimSelect({ select: "select#category-staff", showContent: "down", showSearch: !1, });
     
-  
-
-
-      
       Array.prototype.pushUnique = function (item){
         if(this.indexOf(item) == -1) {
         //if(jQuery.inArray(item, this) == -1) {
@@ -22,8 +18,8 @@ jQuery(document).ready(function($){
         }
         return false;
     } 
-    Array.prototype.sum = function(){
-        return (this.reduce((a, b) => a + b)).toFixed(2);
+    Array.prototype.sum = function(num=0){
+        return (this.reduce((a, b) => a + b)).toFixed(num);
     }
     
     function addCommas(nStr) {
@@ -61,8 +57,8 @@ jQuery(document).ready(function($){
         offshoreCost:[],
         savings:[],
     }
-    String.prototype.getClear = function(){
-        return +this.replace('$','').replace('£','').replace('€','').replace(/,/g,'')
+    String.prototype.getClear = function(num=0){
+        return Number((+this.replace('$','').replace('£','').replace('€','').replace(/,/g,'')).toFixed(num))
     }
     $('#country').on('change', function(){
         var categoryList = document.querySelector('#category-staff');
@@ -165,9 +161,8 @@ jQuery(document).ready(function($){
             $('#category-staff').trigger('change');
             clearInterval(handle);
         }
-        console.log('checking')
     }
-    var handle = setInterval(triggerEvent,1000)
+    var handle = setInterval(triggerEvent,100)
     // console.log(countryData)
     $('#search-staff').on('input', searchList)
     $('#close').on('click',function(){
@@ -221,12 +216,12 @@ jQuery(document).ready(function($){
                             <option value="Senior 5+ Years Experience">Senior</option>
                         </select>
                     </div>
-                    <div class="itemCell teamitem-salary"><span class="currency">${d.symbol} </span><span class="onshore-${$count}">${addCommas(d.monthlyonshore)}</span></div>
+                    <div class="itemCell teamitem-salary"><span class="currency">${d.symbol} </span><span class="onshore-${$count}">${addCommas(Number(d.monthlyonshore).toFixed(0))}</span></div>
                     <div class="itemCell teamitem-salary">
                         <span class="currency">${d.symbol} </span>
-                        <span class="offshore-${$count}">${addCommas(d.monthlyoffshore)}</span>
+                        <span class="offshore-${$count}">${addCommas(Number(d.monthlyoffshore).toFixed(0))}</span>
                     </div>
-                    <div class="itemCell teamitem-salary"><span class="currency ">${d.symbol} </span><span class="saving-${$count}">${addCommas(saving)}</span></div>
+                    <div class="itemCell teamitem-salary"><span class="currency ">${d.symbol} </span><span class="saving-${$count}">${addCommas(Number(saving).toFixed(0))}</span></div>
                     <div class="itemCell teamitem-remove remove" data-title="${$this}" data-index="${$count}">×</div>
                 </div>
             </div>
