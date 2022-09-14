@@ -160,10 +160,10 @@ jQuery(document).ready(function($){
     });
     function triggerEvent(){
         if(data !=''){
+            document.querySelector('.loader-container').style.display = 'none';
             $('#country').trigger('change');
             $('#category-staff').trigger('change');
             clearInterval(handle);
-            document.querySelector('.loader-container').style.display = 'none';
         }
         console.log('checking')
     }
